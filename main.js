@@ -8,10 +8,12 @@ let english_button = document.getElementById("English_Buttons");
 
 var language = "ar";
 
+var isBrowserSuported = true;
+
 
 
 function Selected_Language(selected_language){
-
+    if(!isBrowserSuported) return;
     if(selected_language === "arabic"){
         arabic_button.style.backgroundColor = "#3f9141";
         arabic_button.style.color="white";
@@ -45,7 +47,6 @@ function Selected_Language(selected_language){
 }
 let SpeechRecognition  = window.SpeechRecognition || window.webkitSpeechRecognition ;
 if(SpeechRecognition){
-    console.log("Suported");
     const recognition = new SpeechRecognition();
     btn.addEventListener("click" , ()=>{
         if(icon.classList.contains('fa-microphone')){
@@ -84,5 +85,6 @@ if(SpeechRecognition){
 
 }
 else{
-    console.log("Not Suported");
+    input.value = "your browser not supported, please change it";
+    isBrowserSuported =false;
 }
