@@ -14,6 +14,3 @@ https://speak-to-text.000webhostapp.com/
 
 ## Browser compatibility
 ![image](https://user-images.githubusercontent.com/87250282/178117771-6f1c7c27-ebc0-4b49-89ca-834c1e4da1e4.png)
-
-
-https://github.com/ahmed-code/Speak_to_text
